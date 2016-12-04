@@ -1,0 +1,80 @@
+<html>
+<head>
+	<title>pyrtest</title>
+	<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body>
+
+
+
+<div class='readable'>
+	<h1 class="title">Eularian Video Magnification in Browser</h1>
+	<div class="header">
+		<div id='tabs'></div>
+		<div><a href="http://people.csail.mit.edu/mrub/evm/">Original Paper</a></div>
+	</div>
+<div id='display'></div>
+
+	<div id='resize'>Drag to resize video</div>	
+<div id='controls'>
+	<div id='coefs'>
+		<div class='vis'></div>
+	</div>
+	<div id='spatialAmpFactors'>
+		<div class='vis'></div>
+	</div>
+</div>
+	Right now we're magnifying periodic motion that's about
+	<span class='hz number'></span>
+	with attenuation factor
+	<span class='times number'></span>.
+	We're magnifying things smaller than 
+	<span class='proportion number'></span>
+	between
+	<span class='small number'></span>
+	and
+	<span class='big number'></span>
+	times, and magnifying everything bigger than that
+	<span class='biggest number'></span>
+	times. <span class='instructions'>Drag the blue circles on the graph to change the effect!</span>
+
+<hr />
+  <h1>What is this?</h1>
+  <p>
+    In Fall 2014, I took <b>Bill Freeman</b> and <b>Antonio Torralba</b>'s class <a href="" title="MIT people use obscure decimals instead of, y'know sane course titles and newspeakian portmanteaus">6.869: Advances in Computer Vision</a> with my friend Kevin Kwok.
+    For our final project, we were supposed to implement some variation of one of the algorithms which were covered in class. We decided to implement <a href="http://people.csail.mit.edu/mrub/evm/">Eulerian Video Magnification</a> in the browser, to see if it could work with a live webcam feed. 
+  </p>
+  <p>
+    If you wanna learn more about details of the algorithm, or check out the exciting sequels they've worked on. Check out the <a href="http://people.csail.mit.edu/mrub/evm/">original 2012 paper</a> or  the 2013 <a href="http://people.csail.mit.edu/nwadhwa/phase-video/"> phase-based technique</a>.
+  </p>
+  <h1 >Wat? <span>What's Video Magnification?</span></h1>
+  <p>
+    It's sort of like being <b>Superman</b> and having <b>X-Ray vision</b>. It's about being able to see things that wee ordinary people can't, because the changes are <b>too small to notice</b>. But rather than being like a microscope, which just <b>blows everything up</b>, it lets you appreciate subtle change at the original spatial scale. 
+  </p>
+  <h1 >How does it work? </h1>
+  <p>Like everything you've ever known and loved, Eulerian Video Magnification is built on a lie. It's a bit of an optical illusion because while it <i>looks</i> like things are moving more, the pixels aren't actually shifting around. </p>
+
+</div>
+<div class='footer readable'>
+	Painstakingly crafted with the single-letter-mashed-by-nose technique by <a href="http://omrelli.ug">omrelli.ug</a>
+	<br />
+	<span class='kkwok'>With advice on how to make code less coherent from <a href='http://antimatter15.com'>antimatter15</a></span>
+</div>
+
+
+<script src="compat.js"></script>
+<script src="pyramid.js"></script>
+
+<script src="d3.js"></script>
+
+<script src="alphasChart.js"></script>
+
+<script src="brictor/iir.js"></script>
+<script src="brictor/test.js"></script>
+<script src="coeffSelector.js"></script>
+
+<script src="main.js"></script>
+
+</body>
+</html>

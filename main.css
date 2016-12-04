@@ -1,0 +1,200 @@
+body {
+	margin: 0;
+	// color: #333B3C;
+    background-color: #000;
+	font-family: Lato;	
+    font-weight: 300;
+    line-height: 150%;
+    letter-spacing: .1px;
+    // color: #4E4037;
+    font-size: 18px;
+    color: #B9B9B9;
+    background-image: url('symphony.png');
+    background-size: 100px;
+    background-attachment: fixed;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+circle {
+  fill: #809BFF;
+  stroke-width: 1.5px;
+  cursor: move;
+}
+
+.bar line {
+    fill: none;
+    shape-rendering: crispEdges;
+    vector-effect: non-scaling-stroke;
+    stroke-width: 4px;
+}
+
+line.drop, line.flat {
+    fill: none;
+    vector-effect: non-scaling-stroke;
+}
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: #5F5F5F;
+    shape-rendering: crispEdges;
+}
+
+/*.x.axis path {
+    display: none;
+}*/
+.line {
+    fill: none;
+    stroke: steelblue;
+    stroke-width: 1.5px;
+}
+
+.bar line, .line {
+    stroke: #C37156;
+}
+
+.tab {
+    display: inline-block;
+    /* padding: 10px; */
+    cursor: pointer;
+    margin-right: 10px;
+    margin-bottom: 5px;
+}
+
+
+#display {
+	background-color: #212121;
+	text-align: center;
+	position: relative;
+    height: 400px;
+}
+
+#controls {
+	display: flex;
+	justify-content: space-around;
+    // padding: 20px;
+    font-size: 12px;
+    min-height: 100px;
+}
+
+.number {
+    background: rgba(128, 155, 255, 0.27);
+    width: 68px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 3px;
+    color: #fff;
+    margin-bottom: 2px;
+}
+
+.readable {
+	max-width: 1000px;
+	margin-right: auto;
+	margin-left: auto;
+	padding-right: 20px;
+	padding-left: 20px;
+    background-color: #1D1D1D;
+    box-shadow: 0 2px 58px black;
+    border-radius: 5px;
+    margin-top: 20px;
+    padding-bottom: 1px;
+    margin-bottom: 20px;
+}
+
+.desc {
+	    // box-shadow: 0 2px 10px rgba(0, 0, 0, 0.19);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    // background: #B7C4F6;
+}
+
+.hz{
+    animation: pulsate ease-out;
+    animation-iteration-count: infinite; 
+}
+
+@-webkit-keyframes pulsate {
+    0% {-webkit-transform: scale(.99, .99); opacity: .8}
+    50% {-webkit-transform: scale(1.01, 1.01); opacity: 1}
+    100% {-webkit-transform: scale(.99, .99); opacity: .8}
+}
+
+#resize {
+    // height: 20px;
+    // background: #B7C4F6;
+    text-align: center;
+    cursor: row-resize;
+    font-size: 12px;
+}
+
+a {
+    color: #809BFF;
+    text-decoration: none;
+    font-weight: normal;
+}
+
+#display canvas {
+	position: relative;
+}
+
+#display .bgcanvas {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	opacity: .3;
+}
+
+b {
+    color: #887061;
+}
+
+.footer {
+	// background: #212121;
+	// margin-top: 8%;
+    padding-top: 4%;
+	padding-bottom: 4%;
+	text-align: right;
+    color: rgb(115, 115, 115);
+    background: rgba(0, 0, 0, 0);
+    box-shadow: none;
+    text-shadow: 0 0 10px black;
+}
+
+
+.kkwok {
+    font-size: 12px;
+}
+
+.active {
+	font-weight: bold;
+}
+
+.instructions {
+    font-weight: bold;
+    color: #00A4E8;
+}
+ 
+hr {
+    outline: 0;
+    border: 0;
+    border-top: 1px solid #000;
+    margin-top: 4%;
+    margin-bottom: 4%;
+}
+
+.title {
+	margin-bottom: 15px;
+    padding-top: 20px;
+}
+
+.header {
+	display: flex;
+	justify-content: space-between;
+}
+
+text {
+    fill: #656565;
+}
